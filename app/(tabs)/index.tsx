@@ -95,9 +95,12 @@ export default function HomeScreen() {
     }
   }, []);
 
-  const onOpenDoc = useCallback((doc: DocumentResponse) => {
-    router.push(`/preview/${doc.id}`); // creezi app/preview/[id].tsx
-  }, [router]);
+ const onOpenDoc = useCallback((doc: DocumentResponse) => {
+  router.push({
+    pathname: '/preview/[id]',
+    params: { id: doc.id },
+  });
+}, [router]);
 
   if (loading) {
     return (
