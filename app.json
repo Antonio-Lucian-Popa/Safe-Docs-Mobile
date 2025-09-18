@@ -44,8 +44,8 @@
       "apiBaseUrl": "http://localhost:8080",
       "google": {
         "expoClientId": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com",
-        "iosClientId": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com",
-        "androidClientId": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com",
+        "GOOGLE_CLIENT_ID_IOS": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com",
+        "GOOGLE_CLIENT_ID_ANDROID": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com",
         "webClientId": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com"
       }
     },
