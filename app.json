@@ -9,7 +9,14 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.safedocs.mobile",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan documents.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to select and upload documents.",
+        "NSPhotoLibraryAddUsageDescription": "This app needs permission to save scanned documents to your photo library."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -19,7 +26,14 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.safedocs.mobile",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "output": "static",
@@ -41,10 +55,10 @@
       ]
     ],
     "extra": {
-      "apiBaseUrl": "http://localhost:8080",
+      "apiBaseUrl": "http://192.168.100.94:8080",
       "google": {
         "expoClientId": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com",
-        "GOOGLE_CLIENT_ID_IOS": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com",
+        "GOOGLE_CLIENT_ID_IOS": "69276793339-10h8obs53e9ftlseef61qfm5bkdic5j2.apps.googleusercontent.com",
         "GOOGLE_CLIENT_ID_ANDROID": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com",
         "webClientId": "69276793339-fs9po7b8iic1hjq18lp7maeo93k26djr.apps.googleusercontent.com"
       }

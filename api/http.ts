@@ -3,7 +3,7 @@ import Constants from 'expo-constants';
 import * as SecureStore from 'expo-secure-store';
 
 export const API_BASE_URL =
-  (Constants.expoConfig?.extra as any)?.apiBaseUrl || 'http://10.0.2.2:8080';
+  (Constants.expoConfig?.extra as any)?.apiBaseUrl || 'http://localhost:8080';
 
 export const http = axios.create({
   baseURL: API_BASE_URL,
@@ -22,6 +22,16 @@ export function setTokens(access: string | null, refresh: string | null) {
   } else {
     delete http.defaults.headers.common.Authorization;
   }
+}
+
+export async function login(email: string, password: string) {
+  const { data } = await http.post('/auth/login', { email, password });
+  return data as { accessToken: string; refreshToken: string };
+}
+
+export async function register(email: string, password: string, displayName?: string) {
+  const { data } = await http.post('/auth/register', { email, password, displayName });
+  return data as { accessToken: string; refreshToken: string };
 }
 
 export async function loadTokensFromStore() {
