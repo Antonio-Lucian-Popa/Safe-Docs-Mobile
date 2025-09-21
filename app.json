@@ -52,6 +52,12 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "react-native-document-scanner-plugin",
+        {
+          "cameraPermission": "We need camera access, so you can scan documents"
+        }
       ]
     ],
     "extra": {
